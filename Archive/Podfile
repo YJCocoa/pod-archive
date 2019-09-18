@@ -2,26 +2,18 @@ platform :ios, '9.0'
 use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
-$all_frameworks = ['SQLiteRepairKit', 'WCDB.swift', 'WCDBOptimizedSQLCipher']
-$frameworks = {}
-def yj_pod(name, config)
-    if $all_frameworks.include?(name)
-        $frameworks[name] = "8.6.0"
-    end
-    pod(name, config)
-end
+$frameworks = ['AliyunOSSiOS']
 
 target 'Archive' do
-    yj_pod 'WCDB.swift', '~> 1.0.8.2'
+    pod 'AliyunOSSiOS', :inhibit_warnings => true
 end
 
 post_install do |installer|
-    puts "打包：#{$frameworks}".green
     project = installer.pods_project
     project.recreate_user_schemes(:visible => true)
     project.save
     project.targets.each { |target|
-        if $all_frameworks.include?(target.name)
+        if $frameworks.include?(target.name)
             Xcodeproj::XCScheme.share_scheme(installer.sandbox.project_path, target)
         end
     }
