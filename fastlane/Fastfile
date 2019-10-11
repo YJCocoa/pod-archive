@@ -10,8 +10,9 @@ platform :ios do
     desc "pod 打包"
     lane :framework do
         sh('rm -rf ../Carthage/Build/iOS')
-        sh('rm -rf ../Archive/Pods/Pods.xcodeproj')
+        sh('rm -rf ../Archive/Pods/Pods.xcodeproj/xcshareddata')
         cocoapods(podfile: "./Archive/Podfile")
+        sh('rm -rf ../Archive/Pods/Pods.xcodeproj/xcuserdata')
         carthage(
             command: "build", 
             use_binaries: true,

@@ -2,10 +2,12 @@ platform :ios, '9.0'
 use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
-$frameworks = ['AliyunOSSiOS']
+# 配置需要打包的库
+$frameworks = ['Alamofire']
 
 target 'Archive' do
-    pod 'AliyunOSSiOS', :inhibit_warnings => true
+    # 引入库
+    pod 'Alamofire'
 end
 
 post_install do |installer|
