@@ -1,4 +1,6 @@
-platform :ios, '9.0'
+#source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12.0'
 use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
@@ -6,17 +8,24 @@ install! 'cocoapods', :disable_input_output_paths => true
 $frameworks = ['Alamofire']
 
 target 'Archive' do
-    # 引入库
-    pod 'Alamofire'
+  # 引入库
+  #	pod 'coswift'
+  pod 'Alamofire'
+  pod 'ReactiveCocoa'
+  #  pod 'Kingfisher'
 end
 
 post_install do |installer|
-    project = installer.pods_project
-    project.recreate_user_schemes(:visible => true)
-    project.save
-    project.targets.each { |target|
-        if $frameworks.include?(target.name)
-            Xcodeproj::XCScheme.share_scheme(installer.sandbox.project_path, target)
-        end
-    }
+  project = installer.pods_project
+  project.recreate_user_schemes(:visible => true)
+  project.save
+  project.targets.each { |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ARCHS'] = 'arm64'
+    end
+    if $frameworks.include?(target.name)
+      puts "share #{target.name}"
+      Xcodeproj::XCScheme.share_scheme(installer.sandbox.project_path, target)
+    end
+  }
 end

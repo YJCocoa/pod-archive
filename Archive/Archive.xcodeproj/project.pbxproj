@@ -8,28 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6881D1B0D366E5B8C77D1CB7 /* Pods_Archive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0773A75B7564B0B6F757600 /* Pods_Archive.framework */; };
+		D4547AEC236135A4001D5A90 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = D4547AEA236135A4001D5A90 /* Fastfile */; };
+		D4547AED236135A4001D5A90 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4547AEB236135A4001D5A90 /* README.md */; };
 		D4A4950422D705AF00F498FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4950322D705AF00F498FE /* AppDelegate.swift */; };
 		D4A4950622D705AF00F498FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A4950522D705AF00F498FE /* ViewController.swift */; };
 		D4A4950B22D705B100F498FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A4950A22D705B100F498FE /* Assets.xcassets */; };
 		D4A4950E22D705B100F498FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A4950C22D705B100F498FE /* LaunchScreen.storyboard */; };
-		D4A4951922D7081E00F498FE /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = D4A4951622D7081E00F498FE /* Fastfile */; };
-		D4A4951A22D7081E00F498FE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4A4951722D7081E00F498FE /* README.md */; };
-		D4A4951B22D7081E00F498FE /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = D4A4951822D7081E00F498FE /* report.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B2A1FE6A914BBD4337D4F32 /* Pods-Archive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Archive.debug.xcconfig"; path = "Target Support Files/Pods-Archive/Pods-Archive.debug.xcconfig"; sourceTree = "<group>"; };
 		B0773A75B7564B0B6F757600 /* Pods_Archive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Archive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD2EE32EB88835622495057 /* Pods-Archive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Archive.release.xcconfig"; path = "Target Support Files/Pods-Archive/Pods-Archive.release.xcconfig"; sourceTree = "<group>"; };
+		D4547AEA236135A4001D5A90 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		D4547AEB236135A4001D5A90 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4A4950022D705AF00F498FE /* Archive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Archive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A4950322D705AF00F498FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A4950522D705AF00F498FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4A4950A22D705B100F498FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4A4950D22D705B100F498FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A4950F22D705B100F498FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4A4951622D7081E00F498FE /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		D4A4951722D7081E00F498FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D4A4951822D7081E00F498FE /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +42,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D422A576235012F2004395F4 /* Develop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Develop;
+			sourceTree = "<group>";
+		};
+		D4547AE9236135A4001D5A90 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				D4547AEA236135A4001D5A90 /* Fastfile */,
+				D4547AEB236135A4001D5A90 /* README.md */,
+			);
+			name = fastlane;
+			path = ../../fastlane;
+			sourceTree = "<group>";
+		};
 		D4A494F722D705AF00F498FE = {
 			isa = PBXGroup;
 			children = (
@@ -65,25 +80,15 @@
 		D4A4950222D705AF00F498FE /* Archive */ = {
 			isa = PBXGroup;
 			children = (
-				D4A4951522D7081E00F498FE /* fastlane */,
+				D4547AE9236135A4001D5A90 /* fastlane */,
+				D422A576235012F2004395F4 /* Develop */,
 				D4A4950322D705AF00F498FE /* AppDelegate.swift */,
-				D4A4950522D705AF00F498FE /* ViewController.swift */,
 				D4A4950A22D705B100F498FE /* Assets.xcassets */,
-				D4A4950C22D705B100F498FE /* LaunchScreen.storyboard */,
 				D4A4950F22D705B100F498FE /* Info.plist */,
+				D4A4950C22D705B100F498FE /* LaunchScreen.storyboard */,
+				D4A4950522D705AF00F498FE /* ViewController.swift */,
 			);
 			path = Archive;
-			sourceTree = "<group>";
-		};
-		D4A4951522D7081E00F498FE /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				D4A4951622D7081E00F498FE /* Fastfile */,
-				D4A4951722D7081E00F498FE /* README.md */,
-				D4A4951822D7081E00F498FE /* report.xml */,
-			);
-			name = fastlane;
-			path = ../../fastlane;
 			sourceTree = "<group>";
 		};
 		D902078389EE7332A952F055 /* Frameworks */ = {
@@ -132,7 +137,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = YJCocoa;
 				TargetAttributes = {
 					D4A494FF22D705AF00F498FE = {
@@ -163,11 +168,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4547AEC236135A4001D5A90 /* Fastfile in Resources */,
 				D4A4950E22D705B100F498FE /* LaunchScreen.storyboard in Resources */,
+				D4547AED236135A4001D5A90 /* README.md in Resources */,
 				D4A4950B22D705B100F498FE /* Assets.xcassets in Resources */,
-				D4A4951A22D7081E00F498FE /* README.md in Resources */,
-				D4A4951B22D7081E00F498FE /* report.xml in Resources */,
-				D4A4951922D7081E00F498FE /* Fastfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -288,13 +293,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -324,6 +330,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -343,12 +350,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -361,7 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5657739M7;
 				INFOPLIST_FILE = Archive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y5657739M7;
 				INFOPLIST_FILE = Archive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

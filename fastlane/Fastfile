@@ -17,6 +17,7 @@ platform :ios do
             command: "build", 
             use_binaries: true,
             no_skip_current: true,
+            verbose: true,
             platform: "iOS",
             configuration: "Release",
             cache_builds: true
