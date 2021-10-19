@@ -14,15 +14,15 @@ platform :ios do
         cocoapods(podfile: "./Archive/Podfile")
         sh('rm -rf ../Archive/Pods/Pods.xcodeproj/xcuserdata')
         carthage(
-            command: "build", 
+            command: "build",
             use_binaries: true,
             no_skip_current: true,
-            verbose: true,
             platform: "iOS",
             configuration: "Release",
-            cache_builds: true
+            cache_builds: true,
+            log_path: "Carthage/Build/carthage.log"
         )
-        sh('open ../Carthage/Build/iOS')        
+        sh('open ../Carthage/Build/iOS')
     end
 
 end

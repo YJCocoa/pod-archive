@@ -11,7 +11,7 @@ target 'Archive' do
   # 引入库
   #	pod 'coswift'
   pod 'Alamofire'
-  pod 'ReactiveCocoa'
+#  pod 'ReactiveCocoa'
   #  pod 'Kingfisher'
 end
 
@@ -21,7 +21,7 @@ post_install do |installer|
   project.save
   project.targets.each { |target|
     target.build_configurations.each do |config|
-      config.build_settings['ARCHS'] = 'arm64'
+      config.build_settings['VALID_ARCHS[sdk=iphonesimulator*]'] = 'x86_64' # 模拟器支持
     end
     if $frameworks.include?(target.name)
       puts "share #{target.name}"
