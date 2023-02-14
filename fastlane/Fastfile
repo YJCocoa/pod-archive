@@ -11,8 +11,10 @@ platform :ios do
     lane :archive do
         sh('rm -rf ../Carthage/Build/iOS')
         sh('rm -rf ../Archive/Pods/Pods.xcodeproj/xcshareddata')
-        cocoapods(podfile: "./Archive/Podfile")
         sh('rm -rf ../Archive/Pods/Pods.xcodeproj/xcuserdata')
+        cocoapods(podfile: "./Archive/Podfile")
+        # fix: swiftc -frontend --help -serialize-debugging-options
+        sh('export XCODE_XCCONFIG_FILE=$PWD/carthage.xcconfig')
         carthage(
             command: "build",
             use_binaries: true,
